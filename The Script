@@ -1,0 +1,39 @@
+--constant
+local lapisColor = BrickColor.new("Lapis")
+local neonMat = Enum.Material.Neon
+local brightRed = BrickColor.new("Bright red")
+
+--Variables
+local block = game.Workspace.block
+local currentColor = block.BrickColor
+
+block.Material = Enum.Material.Neon
+block.Reflectance = 0.5
+
+--loop
+while currentColor ~= lapisColor do
+	block.BrickColor = BrickColor.Random()
+	currentColor = block.BrickColor
+	wait(0.1)
+end
+
+if currentColor == lapisColor then
+	print("Good the color is now lapis.")
+	wait(3)
+	print("Nextwe will try to get the color Bright Red:")
+end
+
+for i = 5, 1, -1 do
+	wait(1)
+	print(i)
+end
+
+print("color search begins now!")
+
+while currentColor ~= brightRed do
+	block.BrickColor = BrickColor.Random()
+	currentColor = block.BrickColor
+	wait(0.1)
+end
+
+print("Congrats, it's bright red, Thanks for watching")
